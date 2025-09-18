@@ -41,6 +41,9 @@ Feliz cumpleaños al ángel que se enamoró de un simple mortal. Te amoooo.
             <text textAnchor="middle" x="300" y="300" className="heart-text-line">
               Te amo con cada parte de mí.
             </text>
+              <text textAnchor="middle" x="300" y="300" className="heart-text-line">
+              Mi pequeña hermosa.
+            </text>
           </svg>
         </div>
       )}
