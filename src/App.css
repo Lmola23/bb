@@ -1,0 +1,31 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  text-align: center;
+}
+
+.heart-start-button {
+  width: 400px; /* Adjust size as needed */
+  cursor: pointer;
+  filter: drop-shadow(0 5px 15px rgba(255, 71, 87, 0.4));
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.heart-start-button path {
+  fill: #ff4757; /* Heart color */
+}
+
+.heart-start-button:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 25px rgba(255, 71, 87, 0.6));
+}
+
+.heart-text-line {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 28px; /* Adjust font size */
+  fill: white; /* Text color */
+  font-weight: bold;
+}

@@ -1,0 +1,97 @@
+/* Contenedor de la tarjeta */
+.card-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./../assets/fondo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; /* Para alinear el botón de música */
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  line-height: 1.8;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out; 
+  overflow: scroll;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Estilo del texto del mensaje */
+.message-text {
+  font-family: 'Dancing Script', cursive;
+  color: #fff; /* Color de texto blanco */
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* Sombra de texto para legibilidad */
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin-bottom: 20px; /* Espacio antes del corazón */
+}
+
+/* Cursor parpadeante (ajustado para la nueva fuente) */
+.blinking-cursor {
+  font-family: sans-serif; /* El cursor no debe ser de la fuente del script */
+  font-weight: 100;
+  color: #fff;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Icono de corazón */
+.heart-icon {
+  width: 50px;
+  height: 50px;
+  fill: #ff4757; /* Color rojo para el corazón */
+  animation: pulse 1.5s infinite;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.5s;
+}
+
+.heart-icon.visible {
+  opacity: 1;
+}
+
+/* Animación de pulso para el corazón */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Botón de música */
+.music-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.music-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
